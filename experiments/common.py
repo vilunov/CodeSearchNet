@@ -1,16 +1,22 @@
 import pathlib
-dir = pathlib.Path(__file__).parent
+DIR = pathlib.Path(__file__).parent
 
-DATA_DIRS_4 = {
-    "TRAIN_DATA_PATH": str(dir / "data_dirs/largest/train.txt"),
-    "VALID_DATA_PATH": str(dir / "data_dirs/largest/valid.txt"),
-    "TEST_DATA_PATH": str(dir / "data_dirs/largest/test.txt"),
+DATA_DIRS_LARGEST = {
+    "TRAIN_DATA_PATH": str(DIR / "data_dirs/largest/train.txt"),
+    "VALID_DATA_PATH": str(DIR / "data_dirs/largest/valid.txt"),
+    "TEST_DATA_PATH": str(DIR / "data_dirs/largest/test.txt"),
+}
+
+DATA_DIRS_SMALLEST = {
+    "TRAIN_DATA_PATH": str(DIR / "data_dirs/smallest/train.txt"),
+    "VALID_DATA_PATH": str(DIR / "data_dirs/smallest/valid.txt"),
+    "TEST_DATA_PATH": str(DIR / "data_dirs/smallest/test.txt"),
 }
 
 DATA_DIRS_GO = {
-    "TRAIN_DATA_PATH": str(dir / "data_dirs/go/train.txt"),
-    "VALID_DATA_PATH": str(dir / "data_dirs/go/valid.txt"),
-    "TEST_DATA_PATH": str(dir / "data_dirs/go/test.txt"),
+    "TRAIN_DATA_PATH": str(DIR / "data_dirs/go/train.txt"),
+    "VALID_DATA_PATH": str(DIR / "data_dirs/go/valid.txt"),
+    "TEST_DATA_PATH": str(DIR / "data_dirs/go/test.txt"),
 }
 
 CONSTS = {

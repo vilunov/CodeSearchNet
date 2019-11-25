@@ -1,0 +1,2 @@
+../resources/data/go/final/jsonl/train
+../resources/data/javascript/final/jsonl/train

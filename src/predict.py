@@ -64,6 +64,9 @@ from wandb.apis import InternalApi
 from dataextraction.python.parse_python_data import tokenize_docstring_from_string
 import model_restore_helper
 
+# languages = ('python', 'go', 'javascript', 'java', 'php', 'ruby')
+languages = ('go',)
+
 def query_model(query, model, indices, language, topk=100):
     query_embedding = model.get_query_representations([{'docstring_tokens': tokenize_docstring_from_string(query),
                                                         'language': language}])[0]
@@ -113,7 +116,7 @@ if __name__ == '__main__':
         hyper_overrides={})
     
     predictions = []
-    for language in ('python', 'go', 'javascript', 'java', 'php', 'ruby'):
+    for language in languages:
         print("Evaluating language: %s" % language)
         definitions = pickle.load(open('../resources/data/{}_dedupe_definitions_v2.pkl'.format(language), 'rb'))
         indexes = [{'code_tokens': d['function_tokens'], 'language': d['language']} for d in tqdm(definitions)]

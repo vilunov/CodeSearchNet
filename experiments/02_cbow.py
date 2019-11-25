@@ -1,12 +1,19 @@
+import json
+
 import train
 
 import common
 
 """
-Тренируем эмбеддинги только на голанге
+Аналогично 01_cbow, но размеры эмбеддингов в два раза больше
 """
 
-name = "01_cbow"
+name = "02_cbow"
+
+hypers = {
+    "query_token_embedding_size": 256,
+    "code_token_embedding_size": 256,
+}
 
 args = {
     **common.CONSTS,
@@ -15,6 +22,7 @@ args = {
     "SAVE_FOLDER": str(common.DIR / "saved" / name),
     "--model": "neuralbowmodel",
     "--run-name": name,
+    "--hypers-override": json.dumps(hypers),
 }
 
 if __name__ == '__main__':

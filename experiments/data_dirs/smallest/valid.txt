@@ -1,0 +1,2 @@
+../resources/data/go/final/jsonl/valid
+../resources/data/javascript/final/jsonl/valid

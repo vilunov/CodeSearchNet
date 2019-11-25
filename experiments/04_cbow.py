@@ -3,15 +3,15 @@ import train
 import common
 
 """
-Тренируем эмбеддинги только на голанге
+только на на go и javascript 
 """
 
-name = "01_cbow"
+name = "04_cbow"
 
 args = {
     **common.CONSTS,
     **common.DEFAULTS,
-    **common.DATA_DIRS_GO,
+    **common.DATA_DIRS_SMALLEST,
     "SAVE_FOLDER": str(common.DIR / "saved" / name),
     "--model": "neuralbowmodel",
     "--run-name": name,
